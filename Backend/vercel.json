@@ -2,14 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.js",
+      "src": "Backend/package.json", // Hoặc Backend/app.js nếu bạn muốn chỉ định rõ entrypoint
       "use": "@vercel/node"
     }
+    // ... các builds khác nếu có (ví dụ cho Client)
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "Backend/app.js"
+      "dest": "/Backend/app.js" // <-- Sửa thành đường dẫn này!
+                                 // (Hoặc /Backend/index.js, /Backend/server.js tùy tên file chính của bạn)
     }
   ]
 }
