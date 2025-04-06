@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.js", 
+      "src": "Backend/app.js", 
       "use": "@vercel/node"
     }
  
@@ -10,8 +10,8 @@
   "routes": [
    
     {
-      "src": "/api/(.*)",         
-      "dest": "app.js", 
+      "src": "/(.*)",         
+      "dest": "Backend/app.js", 
       "methods": ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"]
     }
    
