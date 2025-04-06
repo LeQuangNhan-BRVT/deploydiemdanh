@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "./app.js", 
+      "src": "*.js", 
       "use": "@vercel/node"
     }
  
@@ -11,8 +11,8 @@
    
     {
       "src": "/(.*)",         
-      "dest": "./app.js", 
-      "methods": ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"]
+      "dest": "/"
+      
     }
    
   ]
